@@ -8,7 +8,7 @@ export function Pricing() {
     <section id="pricing" className="py-24 bg-white dark:bg-slate-900/30 transition-colors">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -17,13 +17,13 @@ export function Pricing() {
             Preços transparentes para todos os tamanhos
           </motion.h2>
           <p className="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto">
-            Escolha o plano ideal para a sua equipa e comece a escalar as suas vendas no WhatsApp hoje mesmo.
+            Escolha o plano ideal para a sua equipe e comece a escalar as suas vendas no WhatsApp hoje mesmo.
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
           {/* Plano Básico */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -60,7 +60,7 @@ export function Pricing() {
           </motion.div>
 
           {/* Plano Profissional (Destaque) */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -97,6 +97,10 @@ export function Pricing() {
               </li>
               <li className="flex items-center gap-3 text-sm">
                 <Check className="text-whatsapp w-5 h-5 shrink-0" />
+                <span>Suporte a Ligações de Voz</span>
+              </li>
+              <li className="flex items-center gap-3 text-sm">
+                <Check className="text-whatsapp w-5 h-5 shrink-0" />
                 <span>Suporte Prioritário</span>
               </li>
             </ul>
@@ -104,7 +108,7 @@ export function Pricing() {
           </motion.div>
 
           {/* Plano Empresarial */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -133,7 +137,11 @@ export function Pricing() {
               </li>
               <li className="flex items-center gap-3 text-sm">
                 <Check className="text-whatsapp w-5 h-5 shrink-0" />
-                <span>Treino de Equipa Personalizado</span>
+                <span>Suporte a Ligações de Voz</span>
+              </li>
+              <li className="flex items-center gap-3 text-sm">
+                <Check className="text-whatsapp w-5 h-5 shrink-0" />
+                <span>Treino de Equipe Personalizado</span>
               </li>
               <li className="flex items-center gap-3 text-sm">
                 <Check className="text-whatsapp w-5 h-5 shrink-0" />

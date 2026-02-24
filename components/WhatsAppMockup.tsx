@@ -75,6 +75,7 @@ const SIMULATION_STEPS = [
   { type: 'incoming', text: 'Sim, por favor! É difícil de configurar?', delay: 2500 },
   { type: 'agent-typing', text: 'Atendente está digitando...', delay: 1500 },
   { type: 'agent', text: 'Não é nada difícil, Marcos. Vou te enviar o tutorial rápido agora mesmo.', delay: 3000 },
+  { type: 'agent', text: 'Ah, e se preferir, podemos seguir por chamada de voz diretamente por aqui!', delay: 2500 },
 ];
 
 const FILTERS = [
@@ -229,12 +230,13 @@ export function WhatsAppMockup() {
                   <div className="text-sm font-bold dark:text-slate-100">Marcos Silva</div>
                   <div className="text-[10px] text-whatsapp font-bold uppercase flex items-center gap-1">
                     <span className="w-1.5 h-1.5 bg-whatsapp rounded-full animate-pulse"></span>
-                    Online via BetaDesk
+                    API Oficial Cloud Ativa
                   </div>
                 </div>
               </div>
               <div className="flex gap-4 text-slate-500 dark:text-slate-400">
-                <Phone className="w-5 h-5 cursor-pointer hover:text-green-500 transition-colors" />
+                <Phone className={`w-5 h-5 cursor-pointer hover:text-green-500 transition-all ${currentStep === SIMULATION_STEPS.length ? 'animate-pulse text-green-500 scale-110' : ''
+                  }`} />
                 <MoreVertical className="w-5 h-5 cursor-pointer hover:text-blue-500 transition-colors" />
               </div>
             </div>

@@ -8,48 +8,50 @@ export function Hero() {
   return (
     <section className="pt-32 pb-20 px-4">
       <div className="max-w-7xl mx-auto text-center">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="inline-flex items-center gap-2 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 px-4 py-1 rounded-full text-xs font-bold mb-6 border border-blue-100 dark:border-blue-800"
+          className="inline-flex items-center gap-2 bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-300 px-4 py-1.5 rounded-full text-xs font-bold mb-6 border border-green-100 dark:border-green-800 shadow-sm"
         >
-          <Sparkles className="w-4 h-4" />
-          Potencializado por Gemini AI
+          <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+          Baseado na API Oficial do WhatsApp
         </motion.div>
-        
-        <motion.h1 
+
+        <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight font-display"
+          className="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 tracking-tight font-display leading-[1.1]"
         >
-          Um único número, <br />
-          <span className="gradient-text">dezenas de atendentes.</span>
+          A plataforma profissional de <br />
+          <span className="gradient-text">WhatsApp para equipes</span> <br />
+          que levam atendimento a sério
         </motion.h1>
-        
-        <motion.p 
+
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="text-xl text-slate-600 dark:text-slate-400 mb-10 max-w-2xl mx-auto"
+          className="text-xl text-slate-600 dark:text-slate-400 mb-10 max-w-3xl mx-auto leading-relaxed"
         >
-          Transforme o seu WhatsApp num canal de atendimento profissional e organizado. Gestão multi-agente com o poder da Inteligência Artificial.
+          Substitua o WhatsApp Web por uma estrutura completa de atendimento.
+          Gestão multi-agente, automação e dashboards em um só lugar.
         </motion.p>
-        
-        <motion.div 
+
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
           className="flex flex-col sm:flex-row justify-center gap-4"
         >
-          <a href="#pricing" className="gradient-brand text-white px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover-gradient transition shadow-xl">
-            Ver Planos e Preços <ChevronDown className="w-5 h-5" />
+          <a href="#features" className="gradient-brand text-white px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover-gradient transition shadow-xl shadow-blue-200 dark:shadow-none">
+            Explorar Funcionalidades <ChevronDown className="w-5 h-5" />
           </a>
-          <button className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 px-8 py-4 rounded-xl font-bold hover:bg-slate-50 dark:hover:bg-slate-700 transition">
-            Ver demonstração
-          </button>
+          <a href="#mockup" className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 px-8 py-4 rounded-xl font-bold hover:bg-slate-50 dark:hover:bg-slate-700 transition">
+            Ver demonstração ao vivo
+          </a>
         </motion.div>
-        
+
         <WhatsAppMockup />
       </div>
     </section>
