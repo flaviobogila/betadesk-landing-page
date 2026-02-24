@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --color-whatsapp: #25d366;
+  --font-sans: var(--font-sans);
+  --font-display: var(--font-display);
+}
+
+/* Enable class-based dark mode in Tailwind v4 */
+@variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+.gradient-brand {
+  background: linear-gradient(135deg, #2563eb 0%, #10b981 100%);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #2563eb, #10b981);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hover-gradient:hover {
+  background: linear-gradient(135deg, #1d4ed8 0%, #059669 100%);
+}
+
+/* Custom Scrollbar for Mockup */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+.card-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-shine::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+  transform: rotate(45deg);
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.card-shine:hover::after {
+  left: 100%;
+  top: 100%;
+}
