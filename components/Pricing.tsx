@@ -21,7 +21,7 @@ export function Pricing() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
           {/* Plano Básico */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -41,19 +41,23 @@ export function Pricing() {
             <ul className="space-y-4 mb-10 flex-1">
               <li className="flex items-center gap-3 text-sm">
                 <Check className="text-whatsapp w-5 h-5 shrink-0" />
-                <span>Até <strong>5 Agentes</strong> simultâneos</span>
+                <span><strong>1 número</strong> de WhatsApp</span>
               </li>
               <li className="flex items-center gap-3 text-sm">
                 <Check className="text-whatsapp w-5 h-5 shrink-0" />
-                <span>Módulo <strong>Studio Chatbot</strong> (Básico)</span>
+                <span>Até <strong>5 atendentes</strong></span>
               </li>
               <li className="flex items-center gap-3 text-sm">
                 <Check className="text-whatsapp w-5 h-5 shrink-0" />
-                <span>Integração CRM básica</span>
+                <span>Até <strong>1.000</strong> conversas mensais</span>
               </li>
-              <li className="flex items-center gap-3 text-sm opacity-50">
-                <X className="text-slate-400 w-5 h-5 shrink-0" />
-                <span>IA Gemini Inteligente</span>
+              <li className="flex items-center gap-3 text-sm">
+                <Sparkles className="text-blue-500 w-5 h-5 shrink-0" />
+                <span><strong>20.000</strong> créditos de IA/mês</span>
+              </li>
+              <li className="flex items-center gap-3 text-sm">
+                <Check className="text-whatsapp w-5 h-5 shrink-0" />
+                <span>Módulo Studio Chatbot</span>
               </li>
             </ul>
             <button className="w-full py-4 rounded-2xl border border-slate-300 dark:border-slate-700 font-bold hover:bg-slate-100 dark:hover:bg-slate-800 transition">Começar Agora</button>
@@ -81,19 +85,19 @@ export function Pricing() {
             <ul className="space-y-4 mb-10 flex-1">
               <li className="flex items-center gap-3 text-sm">
                 <Check className="text-whatsapp w-5 h-5 shrink-0" />
-                <span>Até <strong>20 Agentes</strong> simultâneos</span>
-              </li>
-              <li className="flex items-center gap-3 text-sm font-semibold">
-                <Check className="text-whatsapp w-5 h-5 shrink-0" />
-                <span>Módulo <strong>Studio Chatbot</strong> (Pro)</span>
+                <span>Até <strong>5 números</strong> de WhatsApp</span>
               </li>
               <li className="flex items-center gap-3 text-sm">
                 <Check className="text-whatsapp w-5 h-5 shrink-0" />
-                <span>Integrações API & Webhooks</span>
+                <span>Até <strong>20 atendentes</strong></span>
               </li>
-              <li className="flex items-center gap-3 text-sm text-blue-600 dark:text-blue-400 font-bold">
-                <Sparkles className="w-5 h-5 shrink-0" />
-                <span>Gemini AI: Sugestões de Resposta</span>
+              <li className="flex items-center gap-3 text-sm">
+                <Check className="text-whatsapp w-5 h-5 shrink-0" />
+                <span>Até <strong>5.000</strong> conversas/mês</span>
+              </li>
+              <li className="flex items-center gap-3 text-sm font-semibold">
+                <Sparkles className="text-blue-500 w-5 h-5 shrink-0" />
+                <span><strong>100.000</strong> créditos de IA/mês</span>
               </li>
               <li className="flex items-center gap-3 text-sm">
                 <Check className="text-whatsapp w-5 h-5 shrink-0" />
@@ -101,7 +105,7 @@ export function Pricing() {
               </li>
               <li className="flex items-center gap-3 text-sm">
                 <Check className="text-whatsapp w-5 h-5 shrink-0" />
-                <span>Suporte Prioritário</span>
+                <span>Módulo Studio Chatbot</span>
               </li>
             </ul>
             <button className="w-full py-4 rounded-2xl gradient-brand text-white font-bold hover-gradient transition shadow-lg shadow-blue-200 dark:shadow-none">Escalar Agora</button>
@@ -117,23 +121,28 @@ export function Pricing() {
           >
             <div className="mb-8">
               <h3 className="text-xl font-bold mb-2">Empresarial</h3>
-              <p className="text-slate-400 text-sm">Controlo total para grandes corporações.</p>
+              <p className="text-slate-400 text-sm">Controle total para grandes corporações.</p>
             </div>
             <div className="mb-8">
-              <span className="text-4xl font-extrabold">Sob Consulta</span>
+              <span className="text-4xl font-extrabold">R$ 899</span>
+              <span className="text-slate-400">/mês</span>
             </div>
             <ul className="space-y-4 mb-10 flex-1">
               <li className="flex items-center gap-3 text-sm">
                 <Check className="text-whatsapp w-5 h-5 shrink-0" />
-                <span>Agentes <strong>Ilimitados</strong></span>
+                <span>Até <strong>20 números</strong> de WhatsApp</span>
               </li>
-              <li className="flex items-center gap-3 text-sm font-semibold">
+              <li className="flex items-center gap-3 text-sm">
                 <Check className="text-whatsapp w-5 h-5 shrink-0" />
-                <span>Módulo <strong>Studio</strong> (Enterprise + IA)</span>
+                <span>Atendentes <strong>Ilimitados</strong></span>
+              </li>
+              <li className="flex items-center gap-3 text-sm">
+                <Check className="text-whatsapp w-5 h-5 shrink-0" />
+                <span>Até <strong>20.000</strong> conversas/mês</span>
               </li>
               <li className="flex items-center gap-3 text-sm text-blue-400 font-bold">
-                <BrainCircuit className="w-5 h-5 shrink-0" />
-                <span>Agentes Autónomos Gemini Ultra</span>
+                <Sparkles className="w-5 h-5 shrink-0" />
+                <span><strong>500.000</strong> créditos de IA/mês</span>
               </li>
               <li className="flex items-center gap-3 text-sm">
                 <Check className="text-whatsapp w-5 h-5 shrink-0" />
@@ -141,16 +150,27 @@ export function Pricing() {
               </li>
               <li className="flex items-center gap-3 text-sm">
                 <Check className="text-whatsapp w-5 h-5 shrink-0" />
-                <span>Treino de Equipe Personalizado</span>
-              </li>
-              <li className="flex items-center gap-3 text-sm">
-                <Check className="text-whatsapp w-5 h-5 shrink-0" />
-                <span>Gerente de Conta Dedicado</span>
+                <span>Módulo Studio Chatbot</span>
               </li>
             </ul>
             <button className="w-full py-4 rounded-2xl bg-white text-slate-900 font-bold hover:bg-slate-100 transition">Contactar Vendas</button>
           </motion.div>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="max-w-3xl mx-auto text-center space-y-2 border-t border-slate-100 dark:border-slate-800 pt-10"
+        >
+          <p className="text-slate-600 dark:text-slate-400 flex items-center justify-center gap-2">
+            <Sparkles className="w-4 h-4 text-blue-500" />
+            Todos os planos incluem Inteligência Artificial integrada para otimizar seu atendimento.
+          </p>
+          <p className="text-slate-500 dark:text-slate-400 text-sm">
+            Créditos de IA não utilizados acumulam por 30 dias.
+          </p>
+        </motion.div>
       </div>
     </section>
   );
