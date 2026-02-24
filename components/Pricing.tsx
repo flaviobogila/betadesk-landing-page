@@ -2,8 +2,11 @@
 
 import { Check, X, Sparkles, BrainCircuit } from 'lucide-react';
 import { motion } from 'motion/react';
+import { useContactForm } from '@/context/ContactContext';
 
 export function Pricing() {
+  const { openContactForm } = useContactForm();
+
   return (
     <section id="pricing" className="py-24 bg-white dark:bg-slate-900/30 transition-colors">
       <div className="max-w-7xl mx-auto px-4">
@@ -60,7 +63,7 @@ export function Pricing() {
                 <span>Módulo Studio Chatbot</span>
               </li>
             </ul>
-            <button className="w-full py-4 rounded-2xl border border-slate-300 dark:border-slate-700 font-bold hover:bg-slate-100 dark:hover:bg-slate-800 transition">Começar Agora</button>
+            <button onClick={openContactForm} className="w-full py-4 rounded-2xl border border-slate-300 dark:border-slate-700 font-bold hover:bg-slate-100 dark:hover:bg-slate-800 transition">Começar Agora</button>
           </motion.div>
 
           {/* Plano Profissional (Destaque) */}
@@ -108,7 +111,7 @@ export function Pricing() {
                 <span>Módulo Studio Chatbot</span>
               </li>
             </ul>
-            <button className="w-full py-4 rounded-2xl gradient-brand text-white font-bold hover-gradient transition shadow-lg shadow-blue-200 dark:shadow-none">Escalar Agora</button>
+            <button onClick={openContactForm} className="w-full py-4 rounded-2xl gradient-brand text-white font-bold hover-gradient transition shadow-lg shadow-blue-200 dark:shadow-none">Começar Agora</button>
           </motion.div>
 
           {/* Plano Empresarial */}
@@ -153,7 +156,7 @@ export function Pricing() {
                 <span>Módulo Studio Chatbot</span>
               </li>
             </ul>
-            <button className="w-full py-4 rounded-2xl bg-white text-slate-900 font-bold hover:bg-slate-100 transition">Contactar Vendas</button>
+            <button onClick={openContactForm} className="w-full py-4 rounded-2xl bg-white text-slate-900 font-bold hover:bg-slate-100 transition">Começar Agora</button>
           </motion.div>
         </div>
 

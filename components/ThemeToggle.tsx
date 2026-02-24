@@ -10,7 +10,7 @@ export function ThemeToggle() {
   useEffect(() => {
     const theme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
+
     const shouldBeDark = theme === 'dark' || (!theme && prefersDark);
     if (shouldBeDark) {
       // eslint-disable-next-line react-hooks/set-state-in-effect
@@ -36,10 +36,10 @@ export function ThemeToggle() {
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
       onClick={toggleTheme}
-      className="fixed bottom-6 right-6 z-[60] gradient-brand p-3 rounded-full shadow-2xl text-white transition-transform"
+      className="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 transition-colors border border-slate-200 dark:border-slate-700"
       aria-label="Toggle Theme"
     >
-      {isDark ? <Sun className="w-6 h-6" /> : <Moon className="w-6 h-6" />}
+      {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
     </motion.button>
   );
 }

@@ -1,10 +1,13 @@
 'use client';
 
-import { Sparkles, ChevronDown } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 import { motion } from 'motion/react';
 import { WhatsAppMockup } from './WhatsAppMockup';
+import { useContactForm } from '@/context/ContactContext';
 
 export function Hero() {
+  const { openContactForm } = useContactForm();
+
   return (
     <section className="pt-32 pb-20 px-4">
       <div className="max-w-7xl mx-auto text-center">
@@ -44,9 +47,12 @@ export function Hero() {
           transition={{ delay: 0.3 }}
           className="flex flex-col sm:flex-row justify-center gap-4"
         >
-          <a href="#features" className="gradient-brand text-white px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover-gradient transition shadow-xl shadow-blue-200 dark:shadow-none">
-            Explorar Funcionalidades <ChevronDown className="w-5 h-5" />
-          </a>
+          <button
+            onClick={openContactForm}
+            className="gradient-brand text-white px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover-gradient transition shadow-xl shadow-blue-200 dark:shadow-none"
+          >
+            Começar Agora <ChevronDown className="w-5 h-5" />
+          </button>
           <a href="#mockup" className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 px-8 py-4 rounded-xl font-bold hover:bg-slate-50 dark:hover:bg-slate-700 transition">
             Ver demonstração ao vivo
           </a>
