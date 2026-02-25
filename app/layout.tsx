@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter, Space_Grotesk } from 'next/font/google';
 import './globals.css';
+import { Analytics } from '@vercel/analytics/react';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -19,8 +20,8 @@ export const metadata: Metadata = {
   authors: [{ name: 'BetaDesk Team' }],
   openGraph: {
     title: 'BetaDesk | Gestão Profissional de WhatsApp',
-    description: 'Transforme seu WhatsApp em uma máquina de vendas com a API Oficial.',
-    url: 'https://betadesk.com.br', // Recomendado atualizar com a URL real depois
+    description: 'Substitua o WhatsApp Web pela API Oficial. Atendimento multicanal, chatbots inteligentes e gestão completa para sua equipe escalar vendas no WhatsApp.',
+    url: 'https://www.betadesk.com.br',
     siteName: 'BetaDesk',
     locale: 'pt_BR',
     type: 'website',
@@ -46,6 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ContactProvider>
           {children}
         </ContactProvider>
+        <Analytics />
       </body>
     </html>
   );
