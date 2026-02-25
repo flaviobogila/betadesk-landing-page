@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, Send, MessageSquare, Building2, User, Mail, Phone, Briefcase, Sparkles } from 'lucide-react';
 import { useContactForm } from '@/context/ContactContext';
+import { track } from '@vercel/analytics';
 
 export function ContactForm() {
     const { isOpen, closeContactForm } = useContactForm();
@@ -36,6 +37,8 @@ export function ContactForm() {
             if (!response.ok) {
                 throw new Error('Erro ao salvar sua solicitação. Tente novamente.');
             }
+
+            track('submit_contact_form');
 
             setSubmitted(true);
             setTimeout(() => {
@@ -105,8 +108,8 @@ export function ContactForm() {
                                             <Sparkles className="w-4 h-4" />
                                         </div>
                                         <div className="text-xs text-blue-800 dark:text-blue-300 leading-tight">
-                                            <strong className="block mb-1">Fase de Lançamento</strong>
-                                            Estamos preparando o BetaDesk! Ao se cadastrar, você entra em nossa <strong>lista de espera prioritária</strong> e será o primeiro a saber quando liberarmos o acesso.
+                                            <strong className="block mb-1">Fase de Lançamento (Early Access)</strong>
+                                            Estamos selecionando empresas para acesso antecipado à plataforma BetaDesk! Ao se cadastrar, você entra em nossa <strong>lista de espera prioritária</strong> e será o primeiro a saber quando liberarmos o acesso.
                                         </div>
                                     </div>
 

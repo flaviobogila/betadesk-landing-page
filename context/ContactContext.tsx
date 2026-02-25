@@ -1,6 +1,7 @@
 'use client';
 
 import React, { createContext, useContext, useState, ReactNode } from 'react';
+import { track } from '@vercel/analytics';
 
 interface ContactContextType {
     isOpen: boolean;
@@ -13,7 +14,10 @@ const ContactContext = createContext<ContactContextType | undefined>(undefined);
 export function ContactProvider({ children }: { children: ReactNode }) {
     const [isOpen, setIsOpen] = useState(false);
 
-    const openContactForm = () => setIsOpen(true);
+    const openContactForm = () => {
+        track('open_contact_form');
+        setIsOpen(true);
+    };
     const closeContactForm = () => setIsOpen(false);
 
     return (
