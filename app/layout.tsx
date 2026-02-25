@@ -30,6 +30,11 @@ export const metadata: Metadata = {
     title: 'BetaDesk | WhatsApp Profissional',
     description: 'A estrutura completa para seu time de atendimento e vendas no WhatsApp.',
   },
+  icons: {
+    icon: '/betadesk-favicon.png',
+    shortcut: '/betadesk-favicon.png',
+    apple: '/betadesk-favicon.png',
+  },
 };
 
 import { ContactProvider } from '@/context/ContactContext';

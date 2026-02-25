@@ -1,6 +1,7 @@
 'use client';
 
-import { LayoutDashboard } from 'lucide-react';
+import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'motion/react';
 import { ThemeToggle } from './ThemeToggle';
 import { useContactForm } from '@/context/ContactContext';
@@ -12,14 +13,29 @@ export function Navbar() {
     <header className="fixed w-full bg-white/80 dark:bg-slate-950/80 backdrop-blur-md z-50 border-b border-slate-200 dark:border-slate-800 transition-all">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="flex items-center gap-2">
-            <div className="gradient-brand p-1.5 rounded-lg shadow-md">
-              <LayoutDashboard className="text-white w-6 h-6" />
+          <Link href="/" className="flex items-center gap-2">
+            <div className="relative w-12 h-12">
+              {/* Símbolo para Light Theme */}
+              <Image
+                src="/betadesk-favicon.png"
+                alt="BetaDesk Symbol"
+                fill
+                className="object-contain dark:hidden"
+                priority
+              />
+              {/* Símbolo para Dark Theme */}
+              <Image
+                src="/betadesk-favicon.png"
+                alt="BetaDesk Symbol"
+                fill
+                className="object-contain hidden dark:block"
+                priority
+              />
             </div>
             <span className="text-2xl font-bold tracking-tight font-display">
               Beta<span className="text-blue-600 dark:text-blue-400">Desk</span>
             </span>
-          </div>
+          </Link>
           <nav className="hidden md:flex space-x-8 font-medium text-slate-600 dark:text-slate-300">
             <a href="#features" className="hover:text-blue-600 dark:hover:text-blue-400 transition">Funcionalidades</a>
             <a href="#mockup" className="hover:text-blue-600 dark:hover:text-blue-400 transition">Demonstração</a>
